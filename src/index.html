@@ -3,12 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
+    <title>Time to play</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <div class="container">
+      <h1 class="title">!!! DOG MISSING !!!</h1>
+      <img src="./images/dog.jpg" alt="good_dog" class="quest-img" />
+      <p class="description">
+        Ok, not this dog. This one is smart. Dumb dog is missing, you need to go
+        find it!!!
+      </p>
+      <button type="submit" class="main-button" data-modal-open>Solved</button>
+    </div>
+
+    <div data-modal class="backdrop is-hidden">
+      <div class="modal">
+        <button type="button" class="mobile-button" data-modal-close>
+          <svg class="modal-close">
+            <use href="./images/icons.svg#icon-close-modal"></use>
+          </svg>
+        </button>
+        <p class="modal-title">Enter your secret word</p>
+        <form class="form">
+        <input type="text" class="input center" name="input" autocomplete="off">
+        <button class="main-modal-button center">Send</button>
+    </form>
+      </div>
+    </div>
+
+
+
+    <script src="./index.js" type="module"></script>
+
   </body>
 </html>
